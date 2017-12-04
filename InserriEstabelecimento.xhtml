@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:ui="http://java.sun.com/jsf/facelets"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:p="http://primefaces.prime.com.tr/ui">
+
+
+<f:view>
+   
+        <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+    <h:form enctype="multipart/form-data">
+       
+        
+       
+           
+                 <table cellspacing="10px" align="center"  border="5px" bordercolor="white">
+                    
+                    <tbody>
+                        <tr>
+                           
+                            <td>Nome do Estabelecimento:</td>
+                            <td><h:inputText value="#{estabelecimentosDAO.e.est_nome}"  label="Nome" id="est_nome">                               
+                                                        
+                                </h:inputText>
+                                 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Estabelecimento Endereço</td>
+                            <td><h:inputText value="#{estabelecimentosDAO.e.est_rua}" label="Rua" id="est_rua" >                               
+                                                             
+                                </h:inputText>
+                                
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>Estabelecimento Bairro</td>
+                            <td><h:inputText value="#{estabelecimentosDAO.e.est_bairro}"  label="Bairro" id="est_bairro" >
+                                   
+                                </h:inputText>    
+                           
+                            </td>                                   
+                        </tr>
+                         <tr>
+                            <td>Estabelecimento UF</td>
+                            <td><h:inputText value="#{estabelecimentosDAO.e.est_uf}"  label="UF" id="est_uf">
+                                                                  
+                                </h:inputText>    
+                       
+                         </td>                                   
+                        </tr>
+                        
+                         <tr>
+                            <td>Estabelecimento Numero</td>
+                            <td><h:inputText value="#{estabelecimentosDAO.e.est_numero}"  label="Numero" id="est_numero">
+                                
+                                    
+                                </h:inputText>    
+                          
+                          
+                         </td>  
+                         
+                          <tr>
+                            <td>Estabelecimento Cidade</td>
+                            <td><h:inputText value="#{estabelecimentosDAO.e.est_cidades}"  label="Cidade" id="est_cidade">
+                                
+                                    
+                                </h:inputText>    
+                          
+                          
+                         </td>                                   
+                        </tr>
+                        </tr>
+   
+                         <tr>
+                            <td>Estabelecimento Descrição</td>
+                            <td><h:inputText value="#{estabelecimentosDAO.e.est_desc}"  label="descricao" id="est_desc">
+                                
+                                   
+                                </h:inputText>    
+                         
+                          
+                         </td>                                   
+                        </tr>
+                        <tr>
+                            
+                            <td> 
+                                <p:fileUpload fileUploadListener="#{indexManagedBean.enviarImagem}" sizeLimit="204800"      />  
+      
+
+                                 </td>
+                        </tr>
+        
+                        <tr>
+                            
+                            <td><h:commandButton value="Inserir"  action="#{estabelecimentosDAO.$AdicionarEstabelecimentos}" /></td>                                   
+                        </tr>
+                         
+                    </tbody>
+                </table>        
+            </h:form>
+
+            
+        </h:body>
+   
+</f:view>
+
+   
+</html>

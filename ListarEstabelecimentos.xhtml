@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    
+    
+
+
+    <body>
+    
+           <h:form>          
+                       
+            <h:panelGrid>
+                <center>
+                    <h:dataTable  var="e" value="#{estabelecimentosDAO.e}"  >
+                        <h:column>
+                            <f:facet name="header">Código</f:facet> 
+                             #{e.est_id}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Nome Estabelecimento</f:facet> 
+                            #{e.est_nome}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Estabelecimento Cidades</f:facet> 
+                            #{e.est_cidades}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Estabelecimentos Número</f:facet> 
+                            #{e.est_numero}
+                        </h:column>
+                        
+                        <h:column>
+                            <f:facet name="header">Estabelecimento Descrição</f:facet> 
+                            #{e.est_desc}
+                        </h:column>
+                      <h:column>
+                            <f:facet name="header">Estabelecimento Rua</f:facet> 
+                            #{e.est_rua}
+                        </h:column>
+                        
+                        <h:column>
+                            <f:facet name="header">Estabelecimento Bairro</f:facet> 
+                            #{e.est_bairro}
+                        </h:column>
+                         <h:column>
+                            <f:facet name="header">Estabelecimento UF</f:facet> 
+                            #{e.est_uf}
+                        </h:column>
+                        
+                        
+                         <h:column>
+                            <f:facet name="header">Remover</f:facet> 
+                            <h:commandButton value="Remover" action="#{estabelecimentosDAO.$ExcluirUsuario}">
+                                <f:setPropertyActionListener value="#{e}" target="#{estabelecimentosDAO.e}"/>
+                                    </h:commandButton>
+                        </h:column>
+                    </h:dataTable>
+                    </center>
+            </h:panelGrid>
+   
+
+        </h:form>
+           
+
+    </body>
+</html>
+
